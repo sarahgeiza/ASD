@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class MahasiswaDemo24 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -37,6 +38,8 @@ public class MahasiswaDemo24 {
                         int nilai = scan.nextInt();
                         dinilai.tugasDinilai(nilai);
                         System.out.printf("Nilai Tugas %s adalah %d\n", dinilai.nama, nilai);
+                        String biner = stack.konversiDesimalKeBiner(nilai);
+                        System.out.println("Nilai Biner Tugas: " + biner);
                     }
                     break;
                 case 3:
