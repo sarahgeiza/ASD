@@ -1,5 +1,4 @@
 package P2Jobsheet10;
-
 public class Mahasiswa24 {
     String nim;
     String nama;
