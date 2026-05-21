@@ -1,3 +1,5 @@
+import org.w3c.dom.Node;
+
 public class DoubleLinkedList24 {
     Node24 head;
     Node24 tail;
@@ -95,6 +97,19 @@ public class DoubleLinkedList24 {
         } else {
             tail = tail.prev;
             tail.next = null;
+        }
+    }
+
+    public void printReverse() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih kosong.");
+            return;
+        }
+
+        Node24 current = tail;
+        while (current != null) {
+            current.data.tampil();;
+            current = current.prev;
         }
     }
 }
