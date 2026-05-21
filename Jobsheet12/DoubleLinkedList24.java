@@ -74,11 +74,25 @@ public class DoubleLinkedList24 {
         }
     }
 
+    public void printReverse() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih kosong.");
+            return;
+        }
+
+        Node24 current = tail;
+        while (current != null) {
+            current.data.tampil();;
+            current = current.prev;
+        }
+    }
+
     public void removeFirst() {
         if (isEmpty()) {
             System.out.println("Linked List kosong.");
             return;
         }
+
         if (head == tail) {
             head = tail = null;
         } else {
@@ -92,24 +106,12 @@ public class DoubleLinkedList24 {
             System.out.println("Linked List kosong.");
             return;
         }
+        
         if (head == tail) {
             head = tail = null;
         } else {
             tail = tail.prev;
             tail.next = null;
-        }
-    }
-
-    public void printReverse() {
-        if (isEmpty()) {
-            System.out.println("Linked List masih kosong.");
-            return;
-        }
-
-        Node24 current = tail;
-        while (current != null) {
-            current.data.tampil();;
-            current = current.prev;
         }
     }
 }
