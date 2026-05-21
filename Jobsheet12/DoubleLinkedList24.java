@@ -92,6 +92,7 @@ public class DoubleLinkedList24 {
             System.out.println("Linked List kosong.");
             return;
         }
+        Mahasiswa24 dataHapus = head.data;
 
         if (head == tail) {
             head = tail = null;
@@ -99,6 +100,8 @@ public class DoubleLinkedList24 {
             head = head.next;
             head.prev = null;
         }
+        System.out.println("Data berhasil dihapus.");
+        dataHapus.tampil();
     }
 
     public void removeLast() {
@@ -106,6 +109,7 @@ public class DoubleLinkedList24 {
             System.out.println("Linked List kosong.");
             return;
         }
+        Mahasiswa24 dataHapus = tail.data;
         
         if (head == tail) {
             head = tail = null;
@@ -113,5 +117,7 @@ public class DoubleLinkedList24 {
             tail = tail.prev;
             tail.next = null;
         }
+        System.out.println("Data berhasil dihapus.");
+        dataHapus.tampil();
     }
 }
